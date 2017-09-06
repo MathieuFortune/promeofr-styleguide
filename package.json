@@ -1,7 +1,7 @@
 {
   "name": "frontpack",
   "version": "1.0.0",
-  "description": "Example project for the Envato Tuts+ course Instant Webpack by Dan Wellman",
+  "description": "Example project for starting a webpack development workspace",
   "main": "app/index.js",
   "dependencies": {},
   "devDependencies": {

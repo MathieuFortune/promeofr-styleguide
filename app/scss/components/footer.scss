@@ -1,0 +1,69 @@
+.comp__footer {
+  padding: $spacing--large 0 0;
+  text-align: center;
+  background-color: $color--lightgrey;
+
+  .back-top {
+    @extend %btn;
+
+    position: absolute;
+    right: $spacing--small;
+    padding: $spacing--base $spacing--tiny;
+    font-family: $font-main--bold;
+    color: $color--white;
+    text-transform: uppercase;
+    background-color: $color--main;
+    border: 1px solid $color--main;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      padding: 8px;
+      vertical-align: middle;
+      border: solid $color--white;
+      border-width: 2px 2px 0 0;
+      border-radius: 1px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    &:hover {
+      color: $color--main;
+      background-color: $color--white;
+
+      &::before {
+        border-color: $color--main;
+      }
+    }
+
+    span {
+      &:nth-child(1) {
+        @include font-size($font-size--tiny);
+
+        display: block;
+      }
+    }
+  }
+
+  .logo {
+    max-width: 240px;
+    margin-top: 0;
+    margin-bottom: $spacing--medium;
+  }
+
+  .menu-footer {
+    padding: $spacing--medium 0;
+    margin-top: $spacing--medium;
+    background-color: $color--white;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      @extend %hidden;
+
+      padding: 0 $spacing--small;
+    }
+  }
+}

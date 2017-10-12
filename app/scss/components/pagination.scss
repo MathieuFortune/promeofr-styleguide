@@ -1,0 +1,157 @@
+.paging-navigation {
+  margin: $spacing--large 0;
+  text-align: center;
+}
+
+.paging-navigation li {
+  display: inline-block;
+  margin: 0 4px 8px;
+}
+
+.paging-navigation ul li:first-child {
+  margin-left: 0;
+}
+
+.paging-navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.paging-navigation a {
+  display: block;
+  padding: 8px;
+  border: 1px solid;
+}
+
+.paging-navigation a:link,
+.paging-navigation a:visited {
+  color: $color--text;
+  border-color: $color--grey;
+}
+
+.paging-navigation li.page-current a,
+.paging-navigation a:hover,
+.paging-navigation a:active,
+.paging-navigation a:focus {
+  color: $color--white;
+  background: $color--main;
+  border-color: $color--main;
+}
+
+.post-navigation {
+  margin: $spacing--large 0;
+}
+
+.nav-links:before,
+.nav-links:after {
+  content: " ";
+  display: table;
+}
+
+.nav-links:after {
+  clear: both;
+}
+
+.nav-links a {
+  display: block;
+  padding: $spacing--base;
+}
+
+.nav-links a:link,
+.nav-links a:visited {
+  color: $color--text;
+  background: $color--grey;
+}
+
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a:focus {
+  color: $color--white;
+  background: $color--main;
+}
+
+.nav-links span {
+  display: block;
+}
+
+.nav-links .nav-previous {
+  margin-bottom: 8px;
+}
+
+.nav-links .nav-next {
+  text-align: right;
+}
+
+.nav-links .nav-previous a {
+  padding-left: 36px;
+}
+
+.nav-links .nav-previous a:hover {
+  color: $color--white;
+}
+
+.nav-links .nav-next a {
+  padding-right: 36px;
+}
+
+.nav-links .meta-nav {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.nav-links .meta-nav:after {
+  position: absolute;
+  top: 0;
+  width: 11px;
+  height: 18px;
+  content: '';
+  background: transparent url('../images/sprites.png') no-repeat;
+}
+
+.nav-links .nav-previous .meta-nav:after {
+  left: -20px;
+}
+
+.nav-links .nav-next .meta-nav:after {
+  right: -20px;
+}
+
+.nav-links .nav-previous a:link .meta-nav:after,
+.nav-links .nav-previous a:visited .meta-nav:after {
+  background-position: -470px -91px;
+}
+
+.nav-links .nav-previous a:hover .meta-nav:after,
+.nav-links .nav-previous a:active .meta-nav:after,
+.nav-links .nav-previous a:focus .meta-nav:after {
+  background-position: -420px -91px;
+}
+
+.nav-links .nav-next a:link .meta-nav:after,
+.nav-links .nav-next a:visited .meta-nav:after {
+  background-position: -360px -91px;
+}
+
+.nav-links .nav-next a:hover .meta-nav:after,
+.nav-links .nav-next a:active .meta-nav:after,
+.nav-links .nav-next a:focus .meta-nav:after {
+  background-position: -310px -91px;
+}
+
+
+@include media(600px) {
+  .nav-links .nav-previous {
+    float: left;
+    padding-right: 8px;
+    width: 50%;
+    max-width: 470px;
+  }
+
+  .nav-links .nav-next {
+    float: right;
+    padding-left: 8px;
+    width: 50%;
+    max-width: 470px;
+  }
+}

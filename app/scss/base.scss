@@ -1,3 +1,58 @@
+/* Base */
 :root {
-  background: pink;
+  @include fluid-typo(14, 17, $phone-h-computed, $desktop-computed);
+  font-family: $font-base--light;
+  font-weight: $font-weight--base;
+  line-height: 1.45;
+  color: $color--text;
+  background-color: $color--white;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+::selection {
+  color: $color--black;
+  background: $color--yellow;
+}
+
+:focus {
+  outline: $color--main auto 5px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+%clearfix,
+.clearfix {
+
+  &::before,
+  &::after {
+    display: table;
+    clear: both;
+  }
+
+  &::after {
+    content: '';
+  }
 }

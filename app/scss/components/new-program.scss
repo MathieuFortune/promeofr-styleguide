@@ -1,0 +1,122 @@
+%carac {
+  @include font-size($font-size--small);
+
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  font-family: $font-main--light;
+  color: $color--grey;
+  text-transform: uppercase;
+  border-top: 1px solid $color--grey;
+}
+
+.comp__new-program {
+  position: relative;
+  margin-bottom: $spacing--wolverine;
+
+  .comp-title {
+    display: inline-block;
+    margin-top: $spacing--tiny;
+    margin-bottom: $spacing--hugh;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1.235rem;
+      left: 0;
+      display: block;
+      width: 100%;
+      min-height: 5.7em;
+      background-color: $color--lightgrey;
+    }
+
+    span {
+      position: relative;
+      border-bottom: 1px solid currentColor;
+    }
+  }
+
+  @include media($tab-h) {
+
+    ul {
+      display: flex;
+    }
+  }
+}
+
+.comp__new-program__item {
+  margin-bottom: $spacing--large;
+
+  > a {
+    display: block;
+    color: $color--text;
+    text-decoration: none;
+    box-shadow: 0 4px 5px 1px rgba(245, 245, 245, 1);
+
+    &:hover {
+      box-shadow: 0 4px 5px 3px rgba(200, 227, 235, 1);
+    }
+  }
+
+  .illus {
+    position: relative;
+  }
+
+  .text {
+    padding-top: $spacing--medium;
+    padding-bottom: $spacing--small;
+    padding-left: $spacing--medium;
+  }
+
+  .tag {
+    @include font-size($font-size--small);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: $spacing--tiny;
+    margin: 0;
+    font-family: $font-main--light;
+    color: $color--white;
+    text-transform: uppercase;
+    background-color: $color--text;
+  }
+
+  .title {
+    @include font-size($font-size--medium);
+
+    margin-top: 0;
+    font-family: $font-main--light;
+  }
+
+  .location {
+    margin: 0;
+    font-family: $font-base--bold;
+    color: $color--main;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 18px;
+      margin-right: 5px;
+      vertical-align: top;
+      background: url('../images/ico-marker-map.png') 0 no-repeat;
+    }
+  }
+
+  .caracteristic {
+    @extend %carac;
+  }
+
+  @include media($tab-h) {
+    width: 32%;
+    margin-bottom: 0;
+    margin-left: $spacing--medium;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

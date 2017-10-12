@@ -1,0 +1,58 @@
+/* Heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @extend %vertical-rhythm;
+  @extend %clearfix;
+  font-family: $font-base--light;
+  font-weight: normal;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+.h1 {
+  @include font-size($font-size--xlarge);
+  color: $color--main;
+}
+
+h2,
+.h2 {
+  @include font-size($font-size--large);
+  color: $color--main;
+}
+
+h3,
+.h3 {
+  @include font-size($font-size--medium);
+  font-family: $font-main--light;
+  color: $color--text;
+}
+
+h4,
+.h4 {
+  @include font-size($font-size--base);
+}
+
+h5,
+.h5 {
+  @include font-size($font-size--small);
+}
+
+h6,
+.h6 {
+  @include font-size($font-size--tiny);
+}
+
+.h-bold {
+  font-family: $font-main--semibold;
+}

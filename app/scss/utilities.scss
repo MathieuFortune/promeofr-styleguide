@@ -1,0 +1,209 @@
+/* Utilities class */
+
+/* center */
+%center,
+.center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+%block-center,
+.block-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* transition */
+%transition,
+.transition {
+  transition-duration: 400ms;
+}
+
+/* alignements */
+.text-left,
+%text-left {
+  text-align: left;
+}
+
+.text-center,
+%text-center {
+  text-align: center;
+}
+
+.text-right,
+%text-right {
+  text-align: right;
+}
+
+/* text helpers */
+strong,
+.bold {
+  font-family: $font-base--bold;
+}
+
+.emphase {
+  @extend %italic;
+  color: $color--main;
+}
+
+em,
+%italic,
+.italic {
+  font-style: italic;
+  font-weight: $font-weight--thin;
+  color: $color--main;
+}
+
+s {
+  @include font-size($font-size--base);
+  color: $color--grey;
+}
+
+.underline,
+%underline {
+  display: inline-block;
+  line-height: 1.5;
+  text-shadow:
+  2px 2px $color--white,
+  2px -2px $color--white,
+  -2px 2px $color--white,
+  -2px -2px $color--white;
+  border-bottom: 1px solid currentColor;
+}
+
+.uppercase,
+%uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase,
+%lowercase {
+  text-transform: lowercase;
+}
+
+%vertical-rhythm {
+  margin: 1.5em auto 0;
+}
+
+/* Atomic margins */
+.no-marg-h,
+%no-marg-h {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.no-marg-v,
+%no-marg-v {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.marg-v--tiny,
+%marg-v--tiny {
+  margin-top: $spacing--tiny;
+  margin-bottom: $spacing--tiny;
+}
+
+.marg-v--small,
+%marg-v--small {
+  margin-top: $spacing--small;
+  margin-bottom: $spacing--small;
+}
+
+.marg-v--base,
+%marg-v--base {
+  margin-top: $spacing--base;
+  margin-bottom: $spacing--base;
+}
+
+.marg-v--medium,
+%marg-v--medium {
+  margin-top: $spacing--medium;
+  margin-bottom: $spacing--medium;
+}
+
+.marg-v--large,
+%marg-v--large {
+  margin-top: $spacing--large;
+  margin-bottom: $spacing--large;
+}
+
+/* others */
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position:static; overflow:visible;
+  margin:0;
+  width:auto; height:auto;
+  clip:auto;
+}
+
+.screen-reader-text {
+  clip: rect(1px,1px,1px,1px);
+  position: absolute!important;
+}
+
+.screen-reader-text:focus {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 15px 23px 14px;
+  height: auto;
+  width: auto;
+  clip: auto !important;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  text-decoration: none;
+  color: #21759b;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  z-index: 100000; /* Above WP toolbar */
+}
+
+
+.list-unstyled,
+%list-unstyled {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+.list-inlined {
+  li {
+    display: inline-block;
+  }
+}

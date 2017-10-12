@@ -1,0 +1,554 @@
+
+/* -----------------
+  Mobile First CSS
+  ------------------*/
+/**
+ * GENERAL
+ */
+
+/**
+ * STRUCTURE
+ */
+#wpadminbar {
+  z-index: 500 !important;
+}
+
+/**
+ * TROUVER UN LOGEMENT
+ */
+
+#pm-jqvmap {
+  margin: 24px auto 0;
+  width: 300px;
+  height: 300px;
+}
+
+/**
+ * ARCHIVE CTX LOCATION
+ */
+
+.pm-location-title {
+  margin: 16px 0;
+}
+
+.pm-location-archive h2 {
+  margin: 24px 0 16px;
+  font-size: 24px;
+  line-height: 30px;
+  color: #575656;
+}
+
+.pm-location-map-wrapper {
+  margin: 32px 0;
+}
+
+.pm-location-list-subterms {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pm-location-list-subterms li {
+  margin-bottom: 32px;
+}
+
+.pm-location-list-subterms img {
+  display: block;
+  max-width: 100%;
+}
+
+.pm-location-list-subterms .pm-location-list-subterm-title {
+  margin: 12px 0 8px;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.pm-location-list-subterm-content {
+  margin: 8px 0 12px;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.pm-location-list-subterm-more {
+  margin: 8px 0 0;
+  text-align: right;
+}
+
+.pm-location-list-subterm-more a {
+  display: inline-block;
+  position: relative;
+  padding: 8px 34px 8px 12px;
+  font-size: 15px;
+  line-height: 15px;
+  color: #fff;
+}
+
+.pm-location-list-subterm-more a:after {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  margin-top: -9px;
+  width: 11px;
+  height: 18px;
+  content: '';
+  background: transparent url('../images/sprites.png') -310px -91px no-repeat;
+}
+
+.pm-location-list-subterm-more a:link,
+.pm-location-list-subterm-more a:visited {
+  background: #51ADC8;
+}
+
+.pm-location-list-subterm-more a:hover,
+.pm-location-list-subterm-more a:active,
+.pm-location-list-subterm-more a:focus {
+  background: #000;
+}
+
+.pm-location-top-towns,
+.pm-location-other-loc {
+  margin-bottom: 32px;
+}
+
+.pm-location-top-towns ul,
+.pm-location-other-loc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pm-location-top-towns li,
+.pm-location-other-loc li {
+  margin-bottom: 8px;
+}
+
+.pm-location-top-towns a,
+.pm-location-other-loc a {
+  display: block;
+  position: relative;
+  padding: 12px 32px 12px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.pm-location-top-towns a:after,
+.pm-location-other-loc a:after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -9px;
+  width: 11px;
+  height: 18px;
+  content: '';
+  background: transparent url('../images/sprites.png') no-repeat;
+}
+
+.pm-location-top-towns a:link,
+.pm-location-top-towns a:visited,
+.pm-location-other-loc a:link,
+.pm-location-other-loc a:visited {
+  color: #000;
+  background: #eeebeb;
+}
+
+.pm-location-top-towns a:hover,
+.pm-location-top-towns a:active,
+.pm-location-top-towns a:focus,
+.pm-location-other-loc a:hover,
+.pm-location-other-loc a:active,
+.pm-location-other-loc a:focus {
+  color: #fff;
+  background: #51ADC8;
+}
+
+.pm-location-top-towns a:link:after,
+.pm-location-top-towns a:visited:after,
+.pm-location-other-loc a:link:after,
+.pm-location-other-loc a:visited:after {
+  background-position: -360px -91px;
+}
+
+.pm-location-top-towns a:hover:after,
+.pm-location-top-towns a:active:after,
+.pm-location-top-towns a:focus:after,
+.pm-location-other-loc a:hover:after,
+.pm-location-other-loc a:active:after,
+.pm-location-other-loc a:focus:after {
+  background-position: -310px -91px;
+}
+
+/**
+ * MAP ELEMENTS
+ */
+
+.lmcg-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.lmcg-wrapper .marker-cluster-small,
+.lmcg-wrapper .marker-cluster-medium,
+.lmcg-wrapper .marker-cluster-large {
+  color: #fff;
+  background: rgba(0, 142, 206, 0.5);
+}
+
+.lmcg-wrapper .marker-cluster-small div,
+.lmcg-wrapper .marker-cluster-medium div,
+.lmcg-wrapper .marker-cluster-large div {
+  background: rgba(0, 142, 206, 0.7);
+}
+
+.pm-lf-popup-program {
+  max-width: 200px;
+  min-height: 170px;
+}
+
+.pm-lf-popup-program img {
+  display: block;
+}
+
+.pm-lf-popup-program h1 {
+  margin: 4px 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.pm-lf-popup-program .lf-popup-program-more {
+  margin: 8px 0 0;
+  text-align: right;
+}
+
+.pm-lf-popup-program .lf-popup-program-more a {
+  display: inline-block;
+  position: relative;
+  padding: 8px 34px 8px 12px;
+  font-size: 15px;
+  line-height: 15px;
+  color: #fff;
+}
+
+.pm-lf-popup-program .lf-popup-program-more a:after {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  margin-top: -9px;
+  width: 11px;
+  height: 18px;
+  content: '';
+  background: transparent url('../images/sprites.png') -310px -91px no-repeat;
+}
+
+.pm-lf-popup-program .lf-popup-program-more a:link,
+.pm-lf-popup-program .lf-popup-program-more a:visited {
+  background: #51ADC8;
+}
+
+.pm-lf-popup-program .lf-popup-program-more a:hover,
+.pm-lf-popup-program .lf-popup-program-more a:active,
+.pm-lf-popup-program .lf-popup-program-more a:focus {
+  background: #000;
+}
+
+/**
+ * FORMS
+ */
+
+.pm-form-contact-general {
+  margin-bottom: 32px;
+}
+
+.pm-form-contact-general p {
+  margin: 16px 0 32px;
+}
+
+.pm-form-contact-general label {
+  display: block;
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.pm-form-contact-general label span {
+  color: red;
+}
+
+.pm-form-field-select .wpcf7-form-control-wrap {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: #f4f4f4;
+  z-index: 99;
+}
+
+.pm-form-field-select .wpcf7-form-control-wrap:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  content: '';
+  background: #51ADC8 url('../images/sprites.png') -398px 11px no-repeat;
+}
+
+.wpcf7-select {
+  display: block;
+  position: relative;
+  padding: 0 10px;
+  width: 110%;
+  height: 45px;
+  font-size: 18px;
+  line-height: 45px;
+  color: #7d7b6d;
+  background: transparent;
+  border: none;
+  -webkit-appearance: none;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.wpcf7-text,
+.wpcf7-textarea {
+  display: block;
+  padding: 0 10px;
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+  line-height: 45px;
+  color: #7d7b6d;
+  border: 1px solid #cfcfcf;
+  -webkit-appearance: none;
+  transition: background .2s;
+}
+
+.wpcf7-text:focus,
+.wpcf7-textarea:focus {
+  outline: 0;
+  background: #f4f4f4;
+}
+
+.wpcf7-textarea {
+  padding: 10px;
+  line-height: 28px;
+}
+
+.pm-form-contact-general .your-address .wpcf7-textarea {
+  height: 150px;
+}
+
+.pm-form-contact-general .your-message .wpcf7-textarea {
+  height: 250px;
+}
+
+.pm-form-plaq-send .your-address .wpcf7-textarea {
+  height: 150px;
+}
+
+.pm-form-submit {
+  height: 45px;
+  text-align: center;
+}
+
+.pm-form .wpcf7-not-valid-tip {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.content-area div.wpcf7-response-output {
+  margin: -32px 0 32px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+body.single-program div.wpcf7-response-output {
+  margin-top: 0;
+}
+
+.content-area div.wpcf7-validation-errors {
+  color: #666;
+  background-color: #f7e700;
+  border: none;
+}
+
+.content-area div.wpcf7-mail-sent-ok {
+  color: #fff;
+  background-color: #aaab7c;
+  border: none;
+}
+
+/* ---------------------
+  600px <= Width
+  --------------------- */
+@media screen and (min-width: 600px) {
+  /**
+   * ARCHIVE CTX LOCATION
+   */
+
+  .pm-location-map-wrapper .lmcg-map {
+    height: 400px;
+  }
+
+  .pm-location-list-subterms .pm-location-list-subterm-title,
+  .pm-location-list-subterm-content,
+  .pm-location-list-subterm-more {
+    padding: 0 8px;
+  }
+
+  /**
+   * PRESSE IN LIST + SINGLE PRESSE
+   */
+
+  .pm-presse-in-list h2,
+  .pm-single-presse h1 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+/* ---------------------
+  600px <= Width <= 767px
+  --------------------- */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /**
+   * TROUVER UN LOGEMENT
+   */
+
+  #pm-jqvmap {
+    width: 580px;
+    height: 580px;
+  }
+}
+
+/* ---------------------
+  600px <= Width <= 989px
+  --------------------- */
+@media screen and (min-width: 600px) and (max-width: 989px) {
+  /**
+   * ARCHIVE CTX LOCATION
+   */
+
+  .pm-location-archive h2 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .pm-location-list-subterms li {
+    float: left;
+    width: 50%;
+  }
+
+  .pm-location-list-subterms li:nth-child(2n+1) {
+    clear: left;
+    padding-right: 8px;
+  }
+
+  .pm-location-list-subterms li:nth-child(2n+2) {
+    padding-left: 8px;
+  }
+}
+
+/* ---------------------
+  768px <= Width
+  --------------------- */
+@media screen and (min-width: 768px) {
+  /**
+   * FORMS
+   */
+
+  .pm-form-contact-general .pm-form-field {
+    float: left;
+    width: 50%;
+  }
+
+  .pm-form-contact-general .pm-form-field:nth-child(2n+1) {
+    clear: left;
+    padding-right: 12px;
+  }
+
+  .pm-form-contact-general .pm-form-field:nth-child(2n+2) {
+    padding-left: 12px;
+  }
+
+  .pm-form-contact-general-msg {
+    clear: left;
+  }
+}
+
+/* ---------------------
+  768px <= Width <= 989px
+  --------------------- */
+@media screen and (min-width: 768px) and (max-width: 989px) {
+  /**
+   * TROUVER UN LOGEMENT
+   */
+
+  #pm-jqvmap {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+/* ---------------------
+  990px <= Width
+  --------------------- */
+@media screen and (min-width: 990px) {
+  /**
+   * TROUVER UN LOGEMENT
+   */
+
+  #pm-jqvmap {
+    width: 450px;
+    height: 450px;
+  }
+
+  /**
+   * ARCHIVE CTX LOCATION
+   */
+
+  .pm-location-archive h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .pm-location-list-subterms {
+    margin-left: -16px;
+  }
+
+  .pm-location-list-subterms li {
+    float: left;
+    padding-left: 16px;
+    width: 33.333333%;
+  }
+
+  .pm-location-list-subterms li:nth-child(3n+1) {
+    clear: left;
+  }
+
+  .pm-location-top-towns li,
+  .pm-location-other-loc li {
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-right: 12px;
+  }
+}
+
+/* ---------------------
+  1171px <= Width
+  --------------------- */
+@media screen and (min-width: 1171px) {
+  /**
+   * ARCHIVE CTX LOCATION
+   */
+
+  .pm-location-list-subterms {
+    margin-left: -24px;
+  }
+
+  .pm-location-list-subterms li {
+    padding-left: 24px;
+  }
+}

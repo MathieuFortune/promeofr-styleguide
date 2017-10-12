@@ -1,0 +1,17 @@
+a {
+  @extend %transition;
+  color: $color--link;
+  text-decoration: none;
+
+  &:hover {
+    color: $color--link--hover;
+  }
+
+  &%hidden {
+    color: $color--text;
+
+    &:hover {
+      color: darken($color--link, 5%);
+    }
+  }
+}

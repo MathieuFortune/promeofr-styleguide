@@ -1,0 +1,221 @@
+.comp__single-program {
+  /* header */
+  header {
+    .title {
+      h1 {
+        margin-top: $spacing--tiny;
+
+        span {
+          @include font-size($font-size--medium);
+
+          display: block;
+        }
+      }
+    }
+
+    .metas {
+      padding: $spacing--tiny 0;
+
+      p {
+        @include font-size($font-size--medium);
+
+        margin: 0;
+      }
+    }
+
+    @include media($tab-h) {
+      .title {
+        width: 60%;
+      }
+
+      .metas {
+        padding-left: $spacing--base;
+        border-left: 1px solid $color--text;
+      }
+    }
+  }
+
+  /* prestation */
+  .prestations {
+    padding-top: $spacing--base;
+    padding-bottom: $spacing--base;
+    background-color: $color--lightgrey;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: $spacing--base;
+    }
+  }
+
+  /* plaquette */
+
+  .plaq {
+    position: relative;
+    padding: $spacing--medium;
+    background-color: $color--secondary;
+
+    .illus {
+      text-align: center;
+      background-color: $color--white;
+    }
+
+    .title {
+      margin-top: 0;
+      color: $color--white;
+    }
+
+    p {
+      color: $color--white;
+    }
+
+    .plaq-toggle {
+      position: relative;
+      margin: $spacing--base 0 0;
+      padding: $spacing--small $spacing--large $spacing--base;
+      text-transform: uppercase;
+      color: $color--main;
+      background: $color--white;
+      cursor: pointer;
+
+      &.toggled {
+        color: $color--white;
+        background-color: $color--main;
+
+        &::after {
+          border-color: $color--white;
+        }
+      }
+
+      &::after {
+        @extend %arrow-btn;
+
+        position: absolute;
+        top: 20px;
+        right: 17px;
+        border-width: 0 0 2px 2px;
+      }
+    }
+
+    .plaq-form {
+      display: none;
+      margin-bottom: $spacing--base;
+    }
+
+    @include media($tab-h) {
+      .illus {
+        position: absolute;
+        top: -$spacing--base;
+        left: 0;
+        max-width: 250px;
+      }
+
+      .text {
+        padding-left: 100px;
+        margin-left: 150px;
+      }
+    }
+  }
+
+  /* lots */
+
+  .lots {
+    padding: 0;
+    margin: 0;
+
+    .lots-item {
+      padding: $spacing--base;
+      margin-bottom: $spacing--base;
+      color: $color--white;
+      background-color: $color--main;
+    }
+
+    .title {
+      margin-top: 0;
+      margin-bottom: $spacing--base;
+      color: $color--white;
+
+      .btn--arrow {
+        cursor: default;
+
+        &:hover {
+          background-color: $color--white;
+        }
+      }
+    }
+
+    .content {
+      padding-left: $spacing--base;
+    }
+
+    @include media($tab-h) {
+      .lots-item {
+        width: 49.5%;
+        margin-bottom: $spacing--base;
+
+        &:nth-child(even) {
+          margin-left: 1%;
+        }
+      }
+
+      &.lots-3 {
+        .lots-item {
+          width: 32.66%;
+
+          &:nth-child(even) {
+            margin-right: 1%;
+            margin-left: 1%;
+          }
+        }
+      }
+    }
+  }
+
+  /* program map */
+  .program-map {
+    position: relative;
+    margin-top: $spacing--medium;
+    margin-bottom: $spacing--medium;
+
+    .program-map-text {
+      overflow: auto;
+      padding: $spacing--medium;
+      background-color: $color--lightgrey;
+
+      .inner {
+        max-width: 470px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @include media($tab-h) {
+      .lmcg-map {
+        height: 400px;
+      }
+
+      .program-map-text {
+        position: absolute;
+        top: $spacing--base;
+        right: $spacing--base;
+        bottom: $spacing--base;
+        z-index: 99;
+        width: 35%;
+        background-color: rgba(255,255,255,.8);
+      }
+    }
+  }
+
+  /* program contact */
+  .program-contact {
+    padding: $spacing--base;
+    margin-top: $spacing--medium;
+    margin-bottom: $spacing--medium;
+    color: $color--white;
+    background-color: $color--secondary;
+
+    h2 {
+      margin-top: 0;
+      color: $color--white;
+    }
+  }
+}

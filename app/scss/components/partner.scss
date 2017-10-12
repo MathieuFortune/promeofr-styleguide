@@ -1,0 +1,86 @@
+.comp__partner {
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0 $spacing--medium $spacing--base;
+  color: $color--white;
+  background-color: $color--secondary;
+  border-top: 5px solid $color--text;
+  transition: transform 300ms;
+  transform: translateY(200%);
+
+  .container {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .row-flex {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $color--white;
+  }
+
+  .text {
+    @include font-size($font-size--medium);
+
+    padding-top: $spacing--large;
+
+    > span {
+      display: block;
+    }
+
+    .big {
+      font-family: $font-base--bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .sub {
+    padding-top: $spacing--large;
+
+    .dl-link {
+      font-family: $font-base--bold;
+
+      &:hover {
+        color: $color--white;
+        text-decoration: underline;
+      }
+    }
+
+    .ico-dl {
+      display: inline-block;
+      width: 25px;
+      height: 24px;
+      background-image: url("/app/images/ico-dl.png");
+      background-repeat: no-repeat;
+    }
+
+    .small {
+      font-family: $font-base--light;
+      font-size: 80%;
+    }
+  }
+
+  @include media($desktop) {
+    padding: 0 $spacing--large $spacing--base;
+
+    .text {
+      width: 80%;
+      margin-bottom: 0;
+
+      > span {
+        display: inline;
+      }
+    }
+
+    .sub {
+      width: 18%;
+      margin-top: -5px;
+      text-align: right;
+    }
+  }
+}

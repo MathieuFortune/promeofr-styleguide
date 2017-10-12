@@ -1,0 +1,68 @@
+.comp__program-list {
+  > .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include media($tab-h) {
+    > .container {
+      padding-right: inherit;
+      padding-left: inherit;
+    }
+  }
+}
+
+.comp__program-list__item {
+  padding-bottom: $spacing--small;
+  margin-bottom: $spacing--base;
+  border-bottom: 1px solid $color--lightgrey;
+
+  .text {
+    .title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .location {
+      margin-top: 0;
+    }
+
+    .caracteristic {
+      @extend %carac;
+    }
+
+    .lots {
+      @extend %list-unstyled;
+    }
+
+    .btn--arrow {
+      cursor: default;
+
+      &:hover {
+        background-color: $color--white;
+      }
+    }
+  }
+
+  @include media($tab-h) {
+    display: flex;
+
+    &.even {
+      .illus {
+        order: 1;
+        margin-left: 2%;
+        margin-right: 0;
+      }
+    }
+
+    .illus {
+      width: 50%;
+      margin-left: 0;
+      margin-right: 2%;
+    }
+
+    .text {
+      width: 48%;
+    }
+  }
+}

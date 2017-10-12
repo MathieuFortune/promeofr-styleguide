@@ -1,0 +1,117 @@
+/* HEADER */
+.comp__header {
+  position: relative;
+  z-index: 100;
+  min-height: auto;
+  background: $color--darkblue;
+  background: linear-gradient($color--darkblue, rgba(81, 173, 200, .45));
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    z-index: 1;
+    background: linear-gradient(#00768E, rgba(81, 173, 200, .45));
+  }
+
+  &::after {
+    background: url('../images/hero-image.jpg') center no-repeat $color--darkblue;
+    background-size: cover;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 5;
+    max-width: $post-width;
+    padding: $spacing--large 0;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: $spacing--base;
+    text-align: center;
+
+    .logo {
+      display: inline-block;
+      width: 124px;
+      height: 124px;
+    }
+  }
+
+  .links {
+    position: absolute;
+    top: 0;
+    right: $spacing--base;
+    text-align: right;
+  }
+
+  /* MENU ICON POSITION SPECIFIC TO HEADER */
+  .menu-icon-container {
+    text-align: center;
+  }
+
+  /* UVP on HOMEPAGE */
+  .uvp {
+    margin-top: $spacing--large;
+    text-align: center;
+
+    .title {
+      @include font-size($font-size--large);
+
+      font-family: $font-main--semibold;
+      color: $color--white;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  @include media($desktop) {
+    min-height: 333px;
+
+    /*background image height*/
+
+    .inner {
+      padding: $spacing--large $spacing--base;
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    .menu-icon-container {
+      display: none;
+    }
+
+    .uvp {
+      margin-top: 9.4rem;
+
+      .title {
+        @include font-size($font-size--xlarge);
+      }
+    }
+  }
+}
+
+/* If homepage */
+.home {
+  @include media($desktop) {
+    .comp__header {
+      height: 80vh;
+
+      /*background image height*/
+
+      &::before {
+        background: transparent;
+      }
+    }
+  }
+}

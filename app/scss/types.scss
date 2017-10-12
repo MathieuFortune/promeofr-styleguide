@@ -1,0 +1,45 @@
+$font-base: 'RobotoSlab_regular', Helvetica, Arial, sans-serif;
+$font-base--bold: 'RobotoSlab_bold', Helvetica, Arial, sans-serif;
+$font-base--light: 'RobotoSlab_light', Helvetica, Arial, sans-serif;
+
+$font-main: 'Montserrat_regular', serif;
+$font-main--bold: 'Montserrat_bold', serif;
+$font-main--semibold: 'Montserrat_semibold', serif;
+$font-main--light: 'Montserrat_light', serif;
+
+$font-weight--bold: 700;
+$font-weight--base: 400;
+$font-weight--thin: 300;
+
+$font-size-browser: 17px;
+
+$font-size--tiny: .64;
+$font-size--small: .8; //~14px
+$font-size--base: 1; //17px
+$font-size--medium: 1.235; //~21px
+$font-size--large: 1.882; //~32px
+$font-size--xlarge: 2.647; //~45px
+$font-size--hugh: 5; //~85px
+
+
+// REM font size
+@mixin font-size($size: 1) {
+  font-size: ($size * $font-size-browser);
+  font-size: ($size * 1rem);
+}
+
+// Fluid line-height
+@mixin line-height($min-height, $max-height, $min-width, $max-width) {
+  line-height: calc(#{$min-height}em + (#{$max-height} - #{$min-height}) * ((100vw - #{$min-width}em) / (#{$max-width} - #{$min-width})));
+}
+
+// Fluid font size
+@mixin fluid-typo($min-font, $max-font, $min-viewport, $max-viewport) {
+  font-size: #{$min-font}px;
+  @media (min-width: #{$min-viewport}px) and (max-width: #{$max-viewport}px) {
+    font-size: calc(#{$min-font}px + (#{$max-font} - #{$min-font}) * ( (100vw - #{$min-viewport}px) / ( #{$max-viewport} - #{$min-viewport})));
+  }
+  @media (min-width: #{$max-viewport}px) {
+    font-size: #{$max-font}px;
+  }
+}

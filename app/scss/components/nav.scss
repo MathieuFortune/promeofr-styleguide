@@ -1,0 +1,129 @@
+@mixin link-hovered {
+  color: $color--white;
+  text-shadow: 0 0 2px $color--white;
+  transition: text-shadow 200ms;
+}
+
+
+/* navigation */
+.comp__nav {
+  position: relative;
+  font-family: $font-main--light;
+  font-size: 15px;
+
+  .container {
+    margin-top: 0;
+  }
+
+  .nav-container {
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: $spacing--small $spacing--base;
+    background: $color--main;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms;
+    will-change: opacity, visibility;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  ul {
+    @extend %list-unstyled;
+
+    /* child ul */
+    .sub-menu {
+      margin-left: $spacing--base;
+    }
+
+    a {
+      display: block;
+      padding: $spacing--tiny 0;
+      color: $color--white;
+      text-transform: uppercase;
+
+      &:hover,
+      &:active,
+      &:focus {
+        @include link-hovered;
+      }
+    }
+  }
+
+  @include media($desktop) {
+    position: absolute;
+    top: 45px;
+    right: 0;
+
+    .nav-container {
+      position: relative;
+      top: 0;
+      display: block;
+      padding: 0;
+      background: transparent;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .pm-menu-primary {
+      /* main li */
+      > li {
+        position: relative;
+        float: left;
+        padding: 10px 0;
+
+        &:last-child {
+          a {
+            border-right: 0;
+          }
+        }
+
+        > a {
+          padding: $spacing--tiny $spacing--base;
+          border-right: 1px solid $color--white;
+        }
+
+        &:hover {
+          ul {
+            display: block;
+            background: $color--white;
+          }
+
+          > a {
+            @include link-hovered;
+          }
+        }
+      }
+
+      /* child ul */
+      .sub-menu {
+        position: absolute;
+        top: 53px;
+        left: -1px;
+        display: none;
+        min-width: $phone-v;
+        padding: $spacing--small;
+        margin-left: 0;
+        box-shadow: 0 4px 5px 1px rgba(123, 123, 123, 0.4);
+
+        a {
+          color: $color--text;
+          text-transform: initial;
+
+          &:hover {
+            font-family: $font-main;
+            color: $color--text;
+          }
+        }
+      }
+
+    }
+  }
+}

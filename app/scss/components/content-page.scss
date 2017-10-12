@@ -1,0 +1,127 @@
+%arrows {
+  &::before {
+    content: '';
+    position: absolute;
+    top: .764rem;
+    left: -.529rem;
+    display: inline-block;
+    width: 1.47rem;
+    height: 1.47rem;
+    padding: .4rem .6rem;
+    color: $color--text;
+    background-color: $color--white;
+    border: 1px solid $color--lightgrey;
+    border-radius: 4px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 1.235rem;
+    left: 0;
+    display: inline-block;
+    padding: 4px;
+    margin-left: -4px;
+    vertical-align: middle;
+    border: solid $color--text;
+    border-width: 0 2px 2px 0;
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}
+
+%arrows--primary {
+  &::before {
+    color: $color--white;
+    background-color: $color--main;
+    border: 1px solid $color--main;
+  }
+
+  &::after {
+    border: solid $color--white;
+    border-width: 0 2px 2px 0;
+  }
+}
+
+.title-page {
+  margin-top: $spacing--large;
+  margin-bottom: $spacing--hugh;
+}
+
+.content-page {
+  line-height: 1.7;
+
+  ul {
+    padding-left: $spacing--base;
+    list-style: none;
+
+    li {
+      @extend %arrows;
+
+      position: relative;
+      padding: $spacing--tiny 0;
+      padding-left: $spacing--medium;
+    }
+
+    &.ul--primary {
+      li {
+        @extend %arrows;
+
+        @extend %arrows--primary;
+      }
+    }
+  }
+
+  blockquote,
+  .blockquote {
+    @include font-size($font-size--medium);
+
+    margin: $spacing--medium $spacing--base;
+    font-family: $font-base;
+    line-height: 1.45;
+    text-align: justify;
+
+    &.blockquote--primary {
+      color: $color--main;
+
+      &::after {
+        background-color: $color--main;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: .235rem;
+      margin-top: $spacing--small;
+      background-color: $color--text;
+    }
+  }
+}
+
+.boxed {
+  padding-top: $spacing--base;
+  padding-bottom: $spacing--base;
+  margin-top: $spacing--base;
+  margin-bottom: $spacing--base;
+  text-align: center;
+  background-color: $color--lightgrey;
+  border-top: 4px solid $color--main;
+
+  &.boxed--secondary {
+    color: $color--white;
+    background-color: $color--secondary;
+    border-top: 4px solid $color--text;
+
+    h1,
+    h2,
+    h3,
+    .h1,
+    .h2,
+    .h3 {
+      color: $color--white;
+    }
+  }
+}

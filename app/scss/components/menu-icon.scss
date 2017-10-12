@@ -1,0 +1,87 @@
+/* MENU */
+
+$menu-icon-size: 1.875;
+$menu-icon-size--em: $menu-icon-size * 1em;
+$menu-icon-size--px: $menu-icon-size * 16px;
+
+.menu-icon-container {
+  cursor: pointer;
+
+  &.active {
+    .menu-icon {
+      .first {
+        transform: translateY(11px) translateX(0) rotate(45deg);
+        transition: all ease 200ms;
+      }
+
+      .second {
+        opacity: 0;
+        transition: all ease 200ms;
+      }
+
+      .third {
+        transform: translateY(-11px) translateX(0) rotate(-45deg);
+        transition: all ease 200ms;
+      }
+
+      .label {
+        // opacity: 0;
+
+      }
+    }
+  }
+}
+
+.menu-icon {
+  position: relative;
+  display: inline-block;
+  width: $menu-icon-size--em;
+  height: $menu-icon-size--em;
+  max-width: $menu-icon-size--px;
+  max-height: $menu-icon-size--px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: 0;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: .325em;
+    max-height: 5px;
+    background: $color--white;
+    border: 0;
+    transition: all ease 200ms;
+
+    &:nth-of-type(2) {
+      top: 11px;
+      transition: transform 100ms;
+    }
+
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+
+    &:nth-of-type(4) {
+      top: 30px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .label {
+    @include font-size($font-size--tiny);
+
+    height: auto;
+    color: $color--white;
+    text-transform: uppercase;
+    background: none;
+    opacity: 1;
+  }
+}

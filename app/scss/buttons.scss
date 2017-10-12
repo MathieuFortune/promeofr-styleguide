@@ -1,0 +1,255 @@
+
+.btn,
+%btn {
+  @extend %transition;
+  @include font-size($font-size--base);
+  display: inline-block;
+  padding: 1rem 1.17rem;
+  margin-bottom: .5625rem;
+  line-height: 1;
+  text-align: center;
+  font-family: $font-base--bold;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  outline: none;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: bottom;
+
+    path {
+      fill: inherit;
+    }
+  }
+}
+
+%arrow-btn {
+  display: inline-block;
+  content: '';
+  padding: 6px;
+  margin-top: -3px;
+  margin-left: 6px;
+  vertical-align: middle;
+  border: solid $color--main;
+  border-width: 0 2px 2px 0;
+  border-radius: 1px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.btn--link {
+  @extend %btn;
+  color: $color--main;
+  background-color: transparent;
+}
+
+.btn--primary,
+%btn--primary {
+  @extend %btn;
+  color: $color--main;
+  background-color: $color--white;
+  border: 1px solid $color--main;
+
+  svg {
+    path {
+      fill: $color--main;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color--white;
+    background-color: $color--main;
+
+    svg {
+      path {
+        fill: $color--white;
+      }
+    }
+
+    &::after {
+      border-color: $color--white;
+    }
+
+  }
+
+  &::after {
+    @extend %arrow-btn;
+  }
+}
+
+
+.btn--secondary,
+%btn--secondary {
+  @extend %btn;
+  color: $color--white;
+  background-color: $color--main;
+  border: 1px solid $color--main;
+
+  svg {
+    path {
+      fill: $color--white;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color--main;
+    background-color: $color--white;
+
+    svg {
+      path {
+        fill: $color--main;
+      }
+    }
+
+    &::after {
+      border-color: $color--main;
+    }
+
+  }
+
+
+  &::after {
+    @extend %arrow-btn;
+    border-color: $color--white;
+  }
+}
+
+.btn--tertiary,
+%btn--tertiary {
+  @extend %btn;
+  color: $color--white;
+  background-color: transparent;
+  border: 1px solid $color--white;
+
+  svg {
+    path {
+      fill: $color--white;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color--main;
+    background-color: $color--white;
+
+    svg {
+      path {
+        fill: $color--main;
+      }
+    }
+
+    &::after {
+      border-color: $color--main;
+    }
+
+  }
+
+  &::after {
+    @extend %arrow-btn;
+    border-color: $color--white;
+  }
+}
+
+.btn--arrow {
+  @extend %btn;
+  padding: .9rem 1.21rem;
+  color: $color--text;
+  background-color: $color--white;
+  border: 1px solid $color--lightgrey;
+  border-radius: 4px;
+
+  &::after {
+    display: inline-block;
+    content: '';
+    padding: 4px;
+    margin-left: -4px;
+    vertical-align: middle;
+    border: solid $color--text;
+    border-width: 0 2px 2px 0;
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color--lightgrey;
+  }
+
+  &.btn--small {
+    padding: .4rem .6rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+a {
+  &.btn--primary {
+    color: $color--main;
+    text-decoration: none;
+
+    &:visited {
+      color: $color--main;
+    }
+
+    &:hover {
+      color: $color--white;
+    }
+  }
+
+  &.btn--secondary {
+    color: $color--white;
+    text-decoration: none;
+
+    &:visited {
+      color: $color--white;
+    }
+
+    &:hover {
+      color: $color--main;
+    }
+  }
+
+  &.btn--tertiary {
+    color: $color--white;
+    text-decoration: none;
+
+    &:visited {
+      color: $color--white;
+    }
+
+    &:hover {
+      color: $color--main;
+    }
+  }
+}
+
+.btn--small {
+  @include font-size($font-size--small);
+  padding: .5625rem 1.125rem;
+}
+
+.btn--medium {
+  padding: 1rem 1.17rem;
+}
+
+.btn--large {
+  @include font-size($font-size--medium);
+  padding: 1.125rem 2.25rem;
+}
+
+.btn--block {
+  display: block;
+}

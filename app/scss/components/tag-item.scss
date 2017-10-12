@@ -1,0 +1,46 @@
+.tag-item,
+a.tag-item {
+  position: relative;
+  display: block;
+  padding: $spacing--medium $spacing--hugh $spacing--medium $spacing--base;
+  margin-bottom: $spacing--base;
+  font-family: $font-base;
+  color: $color--text;
+  text-decoration: none;
+  background-color: $color--lightgrey;
+  cursor: pointer;
+
+  &.tag-item--inlined {
+    display: inline-block;
+  }
+
+  &.tag-item--small {
+    padding: $spacing--small $spacing--hugh $spacing--small $spacing--base;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: $spacing--medium;
+    display: inline-block;
+    padding: 8px;
+    margin-top: 3px;
+    vertical-align: middle;
+    border-style: solid;
+    border-color: $color--main;
+    border-width: 0 2px 2px 0;
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:active {
+    color: $color--white;
+    background-color: $color--main;
+
+    &::after {
+      border-color: $color--white;
+    }
+  }
+}

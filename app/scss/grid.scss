@@ -1,0 +1,103 @@
+@mixin media($width, $direction: min-width) {
+  @media screen and ($direction: $width) {
+    @content;
+  }
+}
+
+@mixin media-retina {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin media-print {
+  @media print {
+    @content;
+  }
+}
+
+
+/* Grid */
+
+%container,
+.container {
+  max-width: $post-width;
+  padding: $spacing--medium $spacing--base;
+  margin: 2em auto 0;
+}
+
+.row,
+%row {
+  @extend %clearfix;
+  position: relative;
+  width: 100%;
+  padding-right: $spacing--small;
+  padding-left: $spacing--small;
+  margin: 1em 0;
+  overflow: hidden;
+}
+
+.row-flex,
+%row-flex {
+  @extend %row;
+  @include media($tab-h) {
+    display: flex;
+  }
+  display: block;
+
+  &.flex-wrapped {
+    flex-wrap: wrap;
+  }
+}
+
+.col-half--left {
+  @include media($tab-h) {
+    float: left;
+    width: 48%;
+    margin: 1%;
+  }
+  float: none;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.col-half--right {
+  @include media($tab-h) {
+    float: right;
+    width: 48%;
+    margin: 1%;
+
+  }
+  float: none;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.col-two-third {
+  @include media($tab-h) {
+    float: left;
+    width: 62%;
+    margin: 1%;
+  }
+  float: none;
+  width: 100%;
+  margin: 1em 0;
+
+}
+
+.col-third {
+  @include media($tab-h) {
+    float: left;
+    width: 31%;
+    margin: 1%;
+  }
+  float: none;
+  width: 100%;
+  margin: 1em 0;
+}

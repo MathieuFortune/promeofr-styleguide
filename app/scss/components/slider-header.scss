@@ -1,0 +1,39 @@
+.comp__slider-header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    // OWL OVERRIDE
+    .owl-item {
+        height: 40vh;
+
+        @include media($desktop) {
+            height: 90vh;
+        }
+    }
+
+    li {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+
+    .uvp {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        margin-top: 0;
+        transform: translate(-50%, 0);
+
+        @include media($desktop) {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

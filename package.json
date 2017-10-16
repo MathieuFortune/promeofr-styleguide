@@ -1,5 +1,5 @@
 {
-  "name": "Promeo.fr Styleguide -- frontpack",
+  "name": "frontpack",
   "version": "1.0.0",
   "description": "Promeo.fr styleguide running with webpack",
   "main": "app/index.js",

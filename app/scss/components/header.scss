@@ -75,9 +75,7 @@
   }
 
   @include media($desktop) {
-    min-height: 333px;
-
-    /*background image height*/
+    min-height: 333px;/*background image height*/
 
     .inner {
       padding: $spacing--large $spacing--base;
@@ -105,13 +103,23 @@
 .home {
   @include media($desktop) {
     .comp__header {
-      height: 80vh;
-
-      /*background image height*/
+      height: 90vh;/*background image height*/
 
       &::before {
         background: transparent;
       }
+      &::after {
+        display: none;
+      }
     }
   }
+  .comp__header {
+  .inner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+  }
+}
 }
